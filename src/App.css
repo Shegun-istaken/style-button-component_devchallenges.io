@@ -1,0 +1,171 @@
+body {
+  font-family: "Space Mono", monospace;
+}
+
+/* .displayButtons{
+  margin: 10% auto 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10%;
+} */
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #2962ff;
+  box-shadow: 0px 2px 3px #0031ca33;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover,
+button:focus {
+  background-color: hsla(224, 100%, 58%, 0.6);
+  color: #0039cb;
+  outline: none;
+}
+
+button.small {
+  padding: 0.4em 0.8em;
+}
+
+button.regular {
+  padding: 0.6em 1.2em;
+}
+
+button.large {
+  padding: 1.2em 2em;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+button#disableShadow {
+  box-shadow: none;
+}
+
+button.outline {
+  background-color: white;
+  color: #3d5afe;
+  border: 1px solid #3d5afe;
+  box-shadow: none;
+}
+
+button.outline:hover,
+button.outline:focus {
+  background-color: hsla(224, 100%, 58%, 0.102);
+  color: #3d5afe;
+}
+
+button.outline img {
+  filter: invert(29%) sepia(99%) saturate(3242%) hue-rotate(227deg)
+    brightness(101%) contrast(99%);
+}
+
+button.text {
+  background-color: white;
+  color: #3d5afe;
+  box-shadow: none;
+}
+
+button.text:hover,
+button.text:focus {
+  background-color: hsla(224, 100%, 58%, 0.102);
+  color: #3d5afe;
+}
+
+button.text img {
+  filter: invert(29%) sepia(99%) saturate(3242%) hue-rotate(227deg)
+    brightness(101%) contrast(99%);
+}
+
+button.disabled {
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+  box-shadow: none;
+}
+
+button.disabled:hover,
+button.disabled:focus {
+  background-color: white;
+}
+
+button.disabled img {
+  filter: invert(73%) sepia(2%) saturate(6%) hue-rotate(331deg) brightness(88%)
+    contrast(83%);
+}
+
+button.secondary {
+  background-color: #455a64;
+  color: white;
+  border: none;
+}
+
+button.secondary:focus,
+button.secondary:hover {
+  background-color: #1c313a;
+  color: white;
+}
+
+button.secondary img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+button.danger {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+}
+
+button.danger:focus,
+button.danger:hover {
+  background-color: #9a0007;
+  color: white;
+}
+
+button.danger img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.shop {
+  width: 20%;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+.inputs{
+  display:flex;
+  gap:15%;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs > *{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 5%;
+}
+
+select{
+  padding: 5%;
+}
+
+select:focus{
+  outline: none;
+}
