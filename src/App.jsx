@@ -95,7 +95,7 @@ function App() {
       case "store":
         e.target.validity.valueMissing
           ? setStore({ src: "", alt: "" })
-          : setStore({ src: "./assets/shop.svg", alt: "shopping cart" });
+          : setStore({ src: "../assets/shop.svg", alt: "shopping cart" });
         break;
     }
   }
