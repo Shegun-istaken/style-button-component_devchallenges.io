@@ -1,5 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import Img1 from "/src/assets/shop.svg";
 import "./App.css";
 
 function Button(props) {
@@ -95,7 +95,7 @@ function App() {
       case "store":
         e.target.validity.valueMissing
           ? setStore({ src: "", alt: "" })
-          : setStore({ src: "/src/assets/shop.svg", alt: "shopping cart" });
+          : setStore({ src: Img1, alt: "shopping cart" });
         break;
     }
   }
