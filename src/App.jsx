@@ -5,7 +5,7 @@ import "./App.css";
 function Button(props) {
   return (
     <button className={props.className} id={props.id}>
-      {props.children} Default
+      {props.children}
     </button>
   );
 }
@@ -74,6 +74,7 @@ function App() {
   const [disableShadow, setdisableShadow] = useState("");
   const [size, setSize] = useState("regular");
   const [store, setStore] = useState({ src: "", alt: "" });
+  const [text, setText] = useState("Default");
 
   function handleChange(e) {
     const name = e.target.name;
@@ -99,16 +100,36 @@ function App() {
     }
   }
 
-  // console.log(e.target.validity.valueMissing);
+  function handleChange02(e) {
+    const value = e.target.value;
+    if (value < 1) {
+      setText("Default");
+    } else {
+      setText(value);
+    }
+  }
+
   const classN = `${variant} ${size}`;
   return (
     <main>
-
       <h1>Style the Button however you like</h1>
 
       <Button className={classN} id={disableShadow}>
         <img src={store.src} alt={store.alt} className="shop" />
+        {text}
       </Button>
+
+      <label className="finallabel">
+        Change the Sample Text (10 char)
+        <input
+        maxLength="12"
+          type="text"
+          name="text"
+          onChange={(e) => {
+            handleChange02(e);
+          }}
+        />
+      </label>
 
       <Select
         size={size}
@@ -117,7 +138,6 @@ function App() {
           handleChange(e);
         }}
       />
-
     </main>
   );
 }
